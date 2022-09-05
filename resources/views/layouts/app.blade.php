@@ -8,6 +8,13 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @livewireStyles
+
+        <style>
+            [x-cloak] { display: none !important; }
+        </style>
+
         <!-- Scripts -->
         <script src="{{ asset('js/init-alpine.js') }}"></script>
 </head>
@@ -34,5 +41,8 @@
         </main>
     </div>
 </div>
+
+@livewireScripts
+
 </body>
 </html>
